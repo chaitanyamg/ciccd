@@ -14,10 +14,10 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t vamsi:latest .
-      - docker tag  470727887694.dkr.ecr.us-east-2.amazonaws.com/vamsi:latest
+      - docker tag  vamsi:latest 470727887694.dkr.ecr.us-east-2.amazonaws.com/chaitanya-demo/vamsi:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push 470727887694.dkr.ecr.us-east-2.amazonaws.com/chaitanya-demo vamsi:latest
+      - docker push 470727887694.dkr.ecr.us-east-2.amazonaws.com/chaitanya-demo/vamsi:latest
       
