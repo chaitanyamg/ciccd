@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /cluster_create.yml
+    destination: /
+hooks:
+  BeforeInstall:
+    - location: scripts/install_dependencies
+      timeout: 300
+      runas: root
+  AfterInstall:
+    - location: scripts/runcommands
+      timeout: 3000
+      runas: root
