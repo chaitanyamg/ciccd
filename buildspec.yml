@@ -18,5 +18,5 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push vamsi:latest
+      - docker push 470727887694.dkr.ecr.us-east-2.amazonaws.com/chaitanya-demo vamsi:latest
       
