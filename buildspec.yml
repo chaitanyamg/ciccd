@@ -14,7 +14,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -t vamsi:latest .
-      - docker tag vamsi:latest  470727887694.dkr.ecr.us-east-2.amazonaws.com/vamsi:latest
+      - docker tag  470727887694.dkr.ecr.us-east-2.amazonaws.com/vamsi:latest
   post_build:
     commands:
       - echo Build completed on `date`
