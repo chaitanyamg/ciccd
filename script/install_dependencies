@@ -1,2 +1,14 @@
 #!/bin/bash
-yum install -y httpd
+sudo apt-get update -Y
+sudo apt-get install default-jdk -Y
+sudo groupadd tomcat
+sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+cd /tmp
+curl -O https://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.103/bin/apache-tomcat-7.0.103.tar.gz
+sudo mkdir /opt/tomcat
+sudo tar xzvf apache-tomcat-7*tar.gz -C /opt/tomcat --strip-components=1
+cd /opt/tomcat
+sudo chgrp -R tomcat /opt/tomcat
+sudo chmod -R g+r conf
+sudo chmod g+x conf
+sudo chown -R tomcat webapps/ work/ temp/ logs/
